@@ -1,0 +1,59 @@
+<!-- no use anymore
+
+Home.php:
+<?php 
+require_once ('Heading.php');
+session_start();
+?>
+
+<button type="button" id="btnhome" name="btnhome" onclick="window.location.href='Home.php';">Back to Login</button>
+<button type="button" id="btnbacklogin" name="btnbacklogin" onclick="window.location.href='Login.php';">Back to Login</button>
+<button type="button" id="btnbacklogin" name="btnbacklogin" onclick="window.location.href='Login.php';">Back to Login</button>
+<button type="button" id="btnbacklogin" name="btnbacklogin" onclick="window.location.href='Login.php';">Back to Login</button>
+
+<!--<?php
+require_once ('Footer.php');
+?>
+
+
+Registration.html:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="registrationcontent">
+            <h2>Personal Information</h2>
+            <br>
+            <div class=register>
+                <form action="Registration.php" method="POST">
+                    <input type="hidden" name="email" value="<?php echo $_POST['email'];?>">
+                    <input type="hidden" name="password" value="<?php echo $_POST['password'];?>">
+                    <label for="name">Full Name: </label>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <br>
+                    <label for="studentid">Student ID:</label>
+                    <input type="text" id="studentid" name="studentid" placeholder="eg. 00XXX00000" required>
+                    <br>
+                    <label for="programme">Programme:</label>
+                    <input type="text" id="programme" name="programme" placeholder="eg. RSD" required>
+                    <br>
+                    <label for="contactnumber">Contact Number: </label>
+                    <input type="text" id="contactnumber" name="contactnumber" placeholder="Contact Number" required>
+                    <br>
+                    <label for="role">Register As:</label>
+                    <select name="role">
+                        <option value="student">Student</option>
+                        <option value="committee">Committee</option>
+                    </select>
+                    <br><br>
+                    <button type="submit" id="btnregister" name="btnregister">Register</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+-->

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<?php 
+require_once ('Heading.php');
+?>
+
+<html>
+    <head>
+        <title>Create Post</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+        function validateForm() {
+            var startDate = document.getElementById("startdate").value;
+            var endDate = document.getElementById("enddate").value;
+            if (new Date(startDate) < new Date()) {
+                alert("Start date should be after today.");
+                return false;
+            }
+            if (new Date(startDate) > new Date(endDate)) {
+                alert("End Date should be after Start Date.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    </head>
+    <body>
+        <div class="postcreatecontent">
+            <h2>Registration Form</h2>
+            <br>
+            <div class=postcreate>
+                <form action="PostCreate.php" method="POST" onsubmit="return validateForm()">
+                    <label for="posttitle">Post Title: </label>
+                    <input type="text" id="posttitle" name="posttitle" placeholder="Event Name" required>
+                    <br>
+                    <label for="postdescription">Post Description: </label>
+                    <textarea name="postdescription" placeholder="Description" required></textarea>
+                    <br>
+                    <label for="postimage">Post Image: </label>
+                    <input type="file" name="postimage" id="postimage">
+                    <br>
+                    <label for="startdate">Start Date: </label>
+                    <input type="date" id="startdate" name="startdate" required>
+                    <br>
+                    <label for="enddate">End Date: </label>
+                    <input type="date" id="enddate" name="enddate" required>
+                    <br>
+                    <label for="remark">Remark: </label>
+                    <input type="text" id="remark" name="remark" placeholder="Remark (optional)">
+                    <br><br>
+                    <button type="button" id="btnback" name="btnback" onclick="window.location.href='#';">Back</button>
+                    <button type="submit" id="btnpostcreate" name="btnpostcreate">Create</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!--<?php
+require_once ('Footer.php');
+?>-->
